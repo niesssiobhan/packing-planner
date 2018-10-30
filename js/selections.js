@@ -1,11 +1,8 @@
 'use strict'
 
-var climatePicker = document.getElementById('climates');
+var climateForm = document.getElementById('climateForm');
 var activityForm = document.getElementById('activityForm');
-
-var hotActivityActivities = ['Swim', 'Water Ski', 'Golf'];
-var temperateActivities = ['Hike', 'Fishing', 'Biking'];
-var coldActivities = ['Ice Fishing', 'Skiing', 'Snowshoeing'];
+var itemsForm = document.getElementById('itemsForm');
 
 function createCheckboxItem(elementId, item) {
   var activityFormContents = document.getElementById(elementId);
@@ -21,47 +18,72 @@ function createCheckboxItem(elementId, item) {
   activityFormContents.appendChild(newLabel);
 }
 
-function handleClimateSelection(e) {
-  console.log(e.target.textContent + ' clicked');
-  console.log(e);
+function handleClimateSubmit(e) {
+  e.preventDefault();
 
-  activityForm.hidden = false;
+  console.warn('Climate Selected');
+  console.info(e);
 
-  var activityList = [];
-  switch (e.target.textContent) {
-  case 'Hot':
-    activityList = hotActivityActivities;
-    break;
-  case 'Temperate':
-    activityList = temperateActivities;
-    break;
-  case 'Cold':
-    activityList = coldActivities;
-    break;
+  for (var i = 0; i < e.target.length; i++) {
+    console.log(e.target[i].value, e.target[i].checked);
+
+    if (e.target[i].checked) {
+      var activityList = [];
+      switch (e.target[i].value) {
+      case 'hot':
+        activityList = hotActivities;
+        break;
+      case 'temperate':
+        activityList = temperateActivities;
+        break;
+      case 'cold':
+        activityList = coldActivities;
+        break;
+      }
+    }
   }
 
-  for (var i = 0; i < activityList.length; i++) {
+  for (i = 0; i < activityList.length; i++) {
     createCheckboxItem('activities', activityList[i]);
   }
+
+  climateForm.hidden = true;
+  activityForm.hidden = false;
 }
 
 function handleActivitySubmit(e) {
   e.preventDefault();
-  console.log(e);
+  console.warn('Activities Selected')
+  console.info(e);
 
   for (var i = 0; i < e.target.length; i++) {
     console.log(e.target[i].value, e.target[i].checked);
   }
+  activityForm.hidden = true;
 }
 
-climatePicker.addEventListener('click', handleClimateSelection);
+function handleItemsSubmit(e) {
+  e.preventDefault();
+}
+
+climateForm.addEventListener('submit', handleClimateSubmit);
 activityForm.addEventListener('submit', handleActivitySubmit);
+itemsForm.addEventListener('submit', handleItemsSubmit);
 
-var activities = new Map();
-activities.set('swim', [1,2,3,4]);
-activities.set('golf', [5,6,7,8]);
+// var activities = new Map();
 
-var shitlist  = [];
-for (var i = 0; i < activities.get('swim').length; i++) {
-  shitlist.push(activities.get('swim')[i]);
-}
+// activities.set('swimming', ['water goggles', 'floaties', 'nose plug']);
+// activities.set('snorkeling', ['snorkel mask', 'flippers', 'underwater camera gear', 'snorkel', 'water shoes', 'rash guard', 'float vest', 'wet suit']);
+// activities.set('fishing', ['fishing pole and reel', 'tackle box', 'first aid kit', 'tip up', 'life vest', 'extra line', 'needle nose pliers', 'waders']);
+// activities.set('golfing', ['golf shoes', 'golf bag', 'collared shirt', 'golf balls', 'tees']);
+// activities.set('hiking', ['tent', 'backpack', 'hiking boots', 'hiking poles', 'compass/ map', 'food', 'cooking pots/ pans', 'water filter', 'lighter', 'utensils', 'sleeping bag', 'pillow', 'first aid kit', 'multi-purpose tool', 'trash bag']);
+// activities.set('sledding', ['gaiters', 'inner tube', 'boogie board']);
+// activities.set('skiing', ['skiis', 'snowboard', 'helmet', 'boots', 'poles', 'goggles', 'heavy gloves', 'heavy jacket', 'heavy pants']);
+// activities.set('ice fishing', ['ice auger', 'tape measure', 'ice pick',]);
+// activities.set('showshoeing', ['snowshoes', 'poles', 'weather proof boots', 'gaiters']);
+
+
+// var shitlist  = [];
+// for (var i = 0; i < activities.get('swim').length; i++) {
+//   shitlist.push(activities.get('swim')[i]);
+// }
