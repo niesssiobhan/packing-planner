@@ -1,33 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
+
+  <head>
     <title>Packing Planner</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
-</head>
-<body>
+  </head>
+
+  <body>
+
     <header>
+      <nav>
         <ul>
-            <li>Home</li>
-            <li>Packing List</li>
-            <li>About Us</li>
+          <li id="home"><a href="index.html">Home</a></li>
+          <li id="packingList"><a href="packing-list.html">Packing List</a></li>
+          <li id="aboutUs"><a href="about-us.html">About Us</a></li>
         </ul>
+      </nav>
     </header>
-    <h1>Packing Planner</h1>
-    <img id="hero">
-    <h2>What Climate are you traveling to?</h2>
-    <ul id="climates">
-        <li>Hot</li>
-        <li>Temperate</li>
-        <li>Cold</li>
-    </ul>
-    <div>
-        <form id="activities">
-            
-        </form>
-    </div>
-    
-</body>
+
+    <main>    
+
+      <section>
+        <div>
+          <header>
+            <h1>Packing Planner</h1>
+          </header>
+          <div>
+            <img id="hero">
+            <h2>What Climate are you traveling to?</h2>
+            <ul id="climates">
+              <li>Hot</li>
+              <li>Temperate</li>
+              <li>Cold</li>
+            </ul>
+            <div>
+              <form id="activities"></form>
+            </div>
+          </div>
+        </div>
+
+    </main>
+
+    <footer>
+      <p>&copy;2018 JAH'S</p>
+    </footer>
+
     <script src="js/app.js"></script>
     <script src ="js/selections.js"></script>
+  </body>
+
 </html>
