@@ -1,0 +1,29 @@
+html {
+    background: rgba(219, 206, 206, 0.719);
+}
+nav {
+    border: 3px solid gray;
+    border-radius: 5px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-left: 22px;
+    text-align: center;
+    width: 1300px;
+}
+header li {
+    display: inline-block;
+    font-size: 35px;
+    margin-right: 100px;
+    margin-left: 190px; 
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+section h1{
+    text-align: center;
+    font-size: 70px;
+}
+main h2 {
+    font-size: 40px;
+    margin-left: 30px;
+    margin-top: 30px;
+}
