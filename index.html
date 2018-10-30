@@ -29,11 +29,21 @@
           <div>
             <img id="hero">
             <h2>What Climate are you traveling to?</h2>
-            <ul id="climates">
-              <li>Hot</li>
-              <li>Temperate</li>
-              <li>Cold</li>
-            </ul>
+
+            <div>
+              <form id="climateForm">
+                  <fieldset>
+                    <legend>Pick a Climate</legend>
+                    <input type="radio" value="hot" /> Hot
+                    <input type="radio" value="temperate" /> Temperate
+                    <input type="radio" value="cold" /> Cold
+                    <input type="submit" value="Submit" />
+                  </fieldset>
+                </form>
+            </div>
+
+          </div>
+
             <div>
               <form hidden id="activityForm">
                 <fieldset>
@@ -43,6 +53,17 @@
                 </fieldset>
               </form>
             </div>
+
+            <div>
+              <form hidden id="itemsForm">
+                  <fieldset>
+                    <legend>Pick Your Items</legend>
+                    <div id="items"></div>
+                    <input type="submit" value="Submit">
+                  </fieldset>
+                </form>
+            </div>
+
           </div>
         </div>
 
