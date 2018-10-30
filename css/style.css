@@ -1,12 +1,15 @@
 html {
     background: rgba(219, 206, 206, 0.719);
+    font-size: 25px;
+}
+
+body {
+    margin: 40px;
 }
 nav {
     border: 3px solid gray;
     border-radius: 5px;
-    margin-top: 10px;
-    margin-bottom: 10px;
-    margin-left: 22px;
+    margin: 10px auto 20px ;
     text-align: center;
     width: 1300px;
 }
@@ -24,6 +27,29 @@ section h1{
 }
 main h2 {
     font-size: 40px;
-    margin-left: 30px;
-    margin-top: 30px;
+    margin: 30px;
+}
+
+legend {
+    margin: 20px;
+    background-color: #000;
+    color: #fff;
+    padding: 3px 6px;
+}
+
+.output {
+    font: 1rem 'Fira Sans', sans-serif;
+}
+
+input {
+    margin: .4rem;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
 }
