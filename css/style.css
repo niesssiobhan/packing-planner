@@ -5,6 +5,7 @@ html {
 
 body {
     margin: 40px;
+    font-family: 'Fjalla One', sans-serif;
 }
 
 nav li:last-child{
@@ -17,7 +18,7 @@ nav ul {
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
+    background-color:grey;
 }
 
 nav li {
@@ -35,16 +36,18 @@ nav li a {
 
 /* Change the link color to #111 (black) on hover */
 nav li a:hover {
-    background-color: #111;
+    background-color:orange;
 }
 
 nav .active {
-    background-color: #4CAF50;
+    background-color:blue;
 }
 
-section h1{
+header h1{
     text-align: center;
     font-size: 70px;
+    
+    
 }
 
 /* * {box-sizing:border-box}
@@ -132,11 +135,11 @@ footer {
     color: white;
     text-align: center;
 }
-ul li del {
+ul label del {
     text-decoration: none;
 }
 
-ul li input[type=checkbox]:checked ~ del {
+ul label input[type=checkbox]:checked ~ del {
     text-decoration: line-through;
 }
 
