@@ -84,21 +84,22 @@ function handleActivitySubmit(e) {
 
 function handleItemsSubmit(e) {
   e.preventDefault();
-  var vacationList = [];
+  var removeList = [];
  
   console.warn('Items Selected');
-   for (var i = 0; i < e.target.length; i++) {
+  for (var i = 0; i < e.target.length; i++) {
     console.log(e.target[i].value, e.target[i].checked);
  
-    if (e.target[i].checked) {
- vacationList.push(e.target[i].value);
-         }
+    if (e.target[i].checked !== true) {
+      removeList.push(e.target[i].value);
+    }
   }
- trip.addItems(vacationList);
+  trip.removeArray(removeList);
  
   for (i = 0; i < trip.array.length; i++) {
     createCheckboxItem('items', trip.array[i], true);
   }
+  localStorage.storedList = JSON.stringify(trip.array);
   window.location='packing-list.html';
 }
 
