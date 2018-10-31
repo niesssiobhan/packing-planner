@@ -6,25 +6,104 @@ html {
 body {
     margin: 40px;
 }
-nav {
-    border: 3px solid gray;
-    border-radius: 5px;
-    margin: 10px auto 20px ;
+
+nav li:last-child{
+    float:right;
+    border-right:none;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+nav li {
+    float: left;
+  border-right: 1px solid #bbb;
+}
+
+nav li a {
+    display: block;
+    color: white;
     text-align: center;
-    width: 1300px;
+    padding: 14px 16px;
+    text-decoration: none;
 }
-header li {
-    display: inline-block;
-    font-size: 35px;
-    margin-right: 100px;
-    margin-left: 190px; 
-    margin-top: 20px;
-    margin-bottom: 20px;
+
+/* Change the link color to #111 (black) on hover */
+nav li a:hover {
+    background-color: #111;
 }
+
+nav .active {
+    background-color: #4CAF50;
+}
+
 section h1{
     text-align: center;
     font-size: 70px;
 }
+
+/* * {box-sizing:border-box}
+
+.carousel-container {
+    max-width: 1000px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  /* .imageSlides {
+      display: none;
+  } */
+  
+  /* Next & previous buttons */
+  /* .previous, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  } */
+  
+  /* Position the "next button" to the right */
+  /* .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+   */
+  /* On hover, add a black background color with a little bit see-through */
+  /* .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  } */
+  
+  /* Fading animation */
+  /* .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4} 
+    to {opacity: 1}
+  /* } */ 
+
 main h2 {
     font-size: 40px;
     margin: 30px;

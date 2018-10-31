@@ -105,7 +105,28 @@ function handleItemsSubmit(e) {
   window.location='packing-list.html';
 }
 
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
+// function plusSlides(n) {
+//   showSlides(slideIndex += n);
+// }
+
+// function currentSlide(n) {
+//   showSlides(slideIndex = n);
+// }
+
+// function showSlides(n) {
+//   var i;
+//   var slides = document.getElementsByClassName("imageSlides");
+//   if (n > slides.length) {slideIndex = 1}    
+//   if (n < 1) {slideIndex = slides.length}
+//   for (i = 0; i < slides.length; i++) {
+//       slides[i].style.display = "none";  
+//   }
+//   slides[slideIndex-1].style.display = "block";  
+//   dots[slideIndex-1].className += " active";
+// }
 
 climateForm.addEventListener('submit', handleClimateSubmit);
 activityForm.addEventListener('submit', handleActivitySubmit);
