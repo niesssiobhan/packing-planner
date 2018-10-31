@@ -20,35 +20,42 @@
 
     <main>    
 
-          <!-- <div class="carousel-container">
+      <header>
+            <h1>Packing Planner</h1>
+        </header>
+      
+          <h2>What Climate are you traveling to?</h2>
+      
 
-              <div class="imageSlides fade"></div>
-                <img src="img/suitcase.png" style="width:100%">
-              </div>
-              
-              <div class="imageSlides fade"></div>
-                <img src="img/summer.jpg" style="width:100%">
-              </div>
-              
-              <div class="imageSlides fade"></div>
-                <img src="img/fall.png" style="width:100%">
-              </div>
-              
-              <div class="imageSlides fade"></div>
-                <img src="img/winter.png" style="width:100%">
-              </div>
-                <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
-            </div> -->
+  <!-- Slideshow container -->
+  <div class="slideshow-container">
+
+    <!-- Full-width images with number and caption text -->
+    <div class="mySlides fade">
+      <img src="img/fall.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/luggage-clipart-vintage-suitcase-4.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/summer.jpg" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+      <img src="img/Big_Apple_New_York_Winter_Travel_Vacation_Activities.png" style="width:100%">
+    </div>
+
+    <div class="mySlides fade">
+        <img src="img/suitcase.png" style="width:100%">
+      </div>
+  </div>
+
         
-    <header>
-      <h1>Packing Planner</h1>
-    </header>
-
-      <h2>What Climate are you traveling to?</h2>
 
       <div>
-        <form id="climateForm">
+        <form class="form" id="climateForm">
           <fieldset>
             <legend>Pick a Climate</legend>
             <label class="container"><input type="radio" name="climate" value="hot" />Hot<span class="checkmark"></span></label>
@@ -60,7 +67,7 @@
       </div>
 
       <div>
-        <form hidden id="activityForm">
+        <form class="form" hidden id="activityForm">
           <fieldset>
             <legend>Pick an Activity</legend>
             <div id="activities"></div>
@@ -70,7 +77,7 @@
       </div>
 
       <div>
-        <form hidden id="itemsForm">
+        <form class="form" hidden id="itemsForm">
           <fieldset>
             <legend>Pick Your Items</legend>
             <div id="items"></div>
