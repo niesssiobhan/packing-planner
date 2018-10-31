@@ -99,7 +99,9 @@ function handleItemsSubmit(e) {
   for (i = 0; i < trip.array.length; i++) {
     createCheckboxItem('items', trip.array[i], true);
   }
+
   localStorage.storedList = JSON.stringify(trip.array);
+  
   window.location='packing-list.html';
 }
 
