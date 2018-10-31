@@ -1,7 +1,4 @@
-'use strict';
-
-
-
+// 'use strict';
 
  
 var listToRender = JSON.parse(localStorage.storedList);
@@ -13,8 +10,7 @@ function renderTrip() {
 
  showTrip();
 
-}
-
+// }
 
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showTrip() {
@@ -50,5 +46,5 @@ checkbox.type = 'checkbox';
 
 
 
-// This will initialize the page and draw the cart on screen
-renderTrip();
+// // This will initialize the page and draw the cart on screen
+// renderTrip();
