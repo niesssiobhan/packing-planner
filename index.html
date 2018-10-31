@@ -10,16 +10,13 @@
   </head>
 
   <body>
-
-    
-      <nav>
-        <ul>
-          <li id="home"><a class="active" href="index.html">Home</a></li>
-          <li id="packingList"><a href="packing-list.html">Packing List</a></li>
-          <li id="aboutUs"><a href="about-us.html">About Us</a></li>
-        </ul>
-      </nav>
-   
+    <nav>
+      <ul>
+        <li id="home"><a class="active" href="index.html">Home</a></li>
+        <li id="packingList"><a href="packing-list.html">Packing List</a></li>
+        <li id="aboutUs"><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
 
     <main>    
 
@@ -44,42 +41,43 @@
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div> -->
         
-          <header>
-            <h1>Packing Planner</h1>
-          </header>
-            <h2>What Climate are you traveling to?</h2>
+    <header>
+      <h1>Packing Planner</h1>
+    </header>
 
-            <div>
-              <form id="climateForm">
-                  <fieldset>
-                    <legend>Pick a Climate</legend>
-                    <label class="container"><input type="radio" name="climate" value="hot" />Hot<span class="checkmark"></span></label>
-                    <label class="container"><input type="radio" name="climate" value="temperate" />Temperate<span class="checkmark"></span></label>
-                    <label class="container"><input type="radio" name="climate" value="cold" />Cold<span class="checkmark"></span></label>
-                    <input type="submit" value="Select Climate" />
-                  </fieldset>
-                </form>
-            </div>
+      <h2>What Climate are you traveling to?</h2>
 
-            <div>
-              <form hidden id="activityForm">
-                <fieldset>
-                  <legend>Pick an Activity</legend>
-                  <div id="activities"></div>
-                  <input type="submit" value="Select Activities">
-                </fieldset>
-              </form>
-            </div>
+      <div>
+        <form id="climateForm">
+          <fieldset>
+            <legend>Pick a Climate</legend>
+            <label class="container"><input type="radio" name="climate" value="hot" />Hot<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="climate" value="temperate" />Temperate<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="climate" value="cold" />Cold<span class="checkmark"></span></label>
+            <input type="submit" value="Select Climate" />
+          </fieldset>
+          </form>
+      </div>
 
-            <div>
-              <form hidden id="itemsForm">
-                  <fieldset>
-                    <legend>Pick Your Items</legend>
-                    <div id="items"></div>
-                    <input type="submit" value="Submit Packing List">
-                  </fieldset>
-                </form>
-            </div>
+      <div>
+        <form hidden id="activityForm">
+          <fieldset>
+            <legend>Pick an Activity</legend>
+            <div id="activities"></div>
+            <input type="submit" value="Select Activities">
+          </fieldset>
+        </form>
+      </div>
+
+      <div>
+        <form hidden id="itemsForm">
+          <fieldset>
+            <legend>Pick Your Items</legend>
+            <div id="items"></div>
+            <input type="submit" value="Submit Packing List">
+          </fieldset>
+          </form>
+      </div>
 
     </main>
 
