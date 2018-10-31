@@ -53,9 +53,10 @@ footer {
     color: white;
     text-align: center;
 }
-#finalSelection{
+ul li del {
     text-decoration: none;
-    }
-    #finalSelection[type=checkbox]:checked ~ del {
+}
+
+ul li input[type=checkbox]:checked ~ del {
     text-decoration: line-through;
-    }
+}
