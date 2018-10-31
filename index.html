@@ -21,7 +21,6 @@
 
     <main>    
 
-      <section>
           <!-- <div class="carousel-container">
 
               <div class="imageSlides fade"></div>
@@ -42,7 +41,7 @@
                 <a class="previous" onclick="plusSlides(-1)">&#10094;</a>
                 <a class="next" onclick="plusSlides(1)">&#10095;</a>
             </div> -->
-        <div>
+        
           <header>
             <h1>Packing Planner</h1>
           </header>
@@ -52,15 +51,13 @@
               <form id="climateForm">
                   <fieldset>
                     <legend>Pick a Climate</legend>
-                    <input type="radio" name="climate" value="hot" /> Hot
-                    <input type="radio" name="climate" value="temperate" /> Temperate
-                    <input type="radio" name="climate" value="cold" /> Cold
+                    <label class="container"><input type="radio" name="climate" value="hot" />Hot<span class="checkmark"></span></label>
+                    <label class="container"><input type="radio" name="climate" value="temperate" />Temperate<span class="checkmark"></span></label>
+                    <label class="container"><input type="radio" name="climate" value="cold" />Cold<span class="checkmark"></span></label>
                     <input type="submit" value="Select Climate" />
                   </fieldset>
                 </form>
             </div>
-
-          </div>
 
             <div>
               <form hidden id="activityForm">
@@ -81,9 +78,6 @@
                   </fieldset>
                 </form>
             </div>
-
-          </div>
-        </div>
 
     </main>
 

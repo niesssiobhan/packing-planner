@@ -5,18 +5,25 @@ var activityForm = document.getElementById('activityForm');
 var itemsForm = document.getElementById('itemsForm');
 
 function createCheckboxItem(elementId, item, checkedYN) {
-  var activityFormContents = document.getElementById(elementId);
+  var formContents = document.getElementById(elementId);
+
+  var newLabel = document.createElement('label');
+  newLabel.className = 'container';
+
+  var labelText = document.createTextNode(item);
 
   var newCheck = document.createElement('input');
   newCheck.type = 'checkbox';
   newCheck.value = item;
   newCheck.checked = checkedYN;
 
-  var newLabel = document.createElement('label');
-  newLabel.textContent = item;
+  var newSpan = document.createElement('span');
+  newSpan.className = 'checkmark';
 
-  activityFormContents.appendChild(newCheck);
-  activityFormContents.appendChild(newLabel);
+  newLabel.appendChild(newCheck);
+  newLabel.appendChild(labelText);
+  newLabel.appendChild(newSpan);
+  formContents.appendChild(newLabel);
 }
 
 function handleClimateSubmit(e) {
@@ -105,6 +112,10 @@ function handleItemsSubmit(e) {
   window.location='packing-list.html';
 }
 
+climateForm.addEventListener('submit', handleClimateSubmit);
+activityForm.addEventListener('submit', handleActivitySubmit);
+itemsForm.addEventListener('submit', handleItemsSubmit);
+
 // var slideIndex = 1;
 // showSlides(slideIndex);
 
@@ -127,7 +138,3 @@ function handleItemsSubmit(e) {
 //   slides[slideIndex-1].style.display = "block";  
 //   dots[slideIndex-1].className += " active";
 // }
-
-climateForm.addEventListener('submit', handleClimateSubmit);
-activityForm.addEventListener('submit', handleActivitySubmit);
-itemsForm.addEventListener('submit', handleItemsSubmit);
