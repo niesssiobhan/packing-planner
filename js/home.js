@@ -8,6 +8,7 @@ function createCheckboxItem(elementId, item, checkedYN) {
   var formContents = document.getElementById(elementId);
 
   var newLabel = document.createElement('label');
+  newLabel.className = 'container';
 
   var labelText = document.createTextNode(item);
 
@@ -16,8 +17,12 @@ function createCheckboxItem(elementId, item, checkedYN) {
   newCheck.value = item;
   newCheck.checked = checkedYN;
 
+  var newSpan = document.createElement('span');
+  newSpan.className = 'checkmark';
+
   newLabel.appendChild(newCheck);
   newLabel.appendChild(labelText);
+  newLabel.appendChild(newSpan);
   formContents.appendChild(newLabel);
 }
 
