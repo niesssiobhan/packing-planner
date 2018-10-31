@@ -6,33 +6,38 @@ function renderTrip() {
   var listBody = document.getElementById('finalSelection');
 
   for (var i = 0; i < listToRender.length; i++) {
-    var iLI = document.createElement('li');
+    var newListItem = document.createElement('label');
+    newListItem.className = 'container';
 
-    var checkbox = document.createElement('input');
-    checkbox.type = 'checkbox';
+    var newCheck = document.createElement('input');
+    newCheck.type = 'checkbox';
 
-    var iDEL  = document.createElement('del');
+    var newDel = document.createElement('del');
+    newDel.textContent = listToRender[i];
 
-    iDEL.textContent = listToRender[i];
+    var newSpan = document.createElement('span');
+    newSpan.className = 'checkmark';
 
-    iLI.appendChild(checkbox);
-    iLI.appendChild(iDEL);
-    listBody.appendChild(iLI);
+    newListItem.appendChild(newCheck);
+    newListItem.appendChild(newDel);
+    newListItem.appendChild(newSpan);
+    listBody.appendChild(newListItem);
   }
 }
 
 function handleSubmit(e) {
-e.preventDefault();
+  e.preventDefault();
 
-var newitem = e.target.newItem.value;
-console.log(newitem);
-listToRender.push(newitem);
-document.getElementById('finalSelection').innerHTML='';
-renderTrip();
-// document.getElementById('add').onclick = function() {
-//   var text = document.getElementById('additions').value;
-//   var li = '<li>' + text + '</li>';
-//   document.getElementById('list').appendChild(li);
+  var newitem = e.target.newItem.value;
+  console.log(newitem);
+  listToRender.push(newitem);
+  document.getElementById('finalSelection').innerHTML='';
+  renderTrip();
+  e.target.newItem.value = null;
+  // document.getElementById('add').onclick = function() {
+  //   var text = document.getElementById('additions').value;
+  //   var li = '<li>' + text + '</li>';
+  //   document.getElementById('list').appendChild(li);
   // listToRender.push(li);
   // renderTrip();
   // 
