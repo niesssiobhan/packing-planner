@@ -2,14 +2,15 @@
 
 
 
-function loadTrip() {
- Trip.prototype.loadFromLocalStorage = function() {
-   this.array = JSON.parse(localStorage.getItems(‘trip’));
-}}
+
+ 
+var listToRender = JSON.parse(localStorage.storedList);
+
+
 
 // Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
 function renderTrip() {
- loadTrip();
+
  showTrip();
 
 }
@@ -18,23 +19,32 @@ function renderTrip() {
 // TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
 function showTrip() {
  // Find the table body
- var tableBody = document.querySelector('#finalSelection');
+ var listBody = document.getElementById('finalSelection');
 
  // Iterate over the items in the cart
- for (var i in trip.items) {
+ for (var i = 0; i < listToRender.length; i++) {
    // Create a TR
-   var tr = document.createElement('tr');
+  //  var tr = document.createElement('tr');
+
+var checkbox = document.createElement('input');
+checkbox.type = 'checkbox';
+
 
 
    // Create a TD for the item name
-   var iTD = document.createElement('td');
-   iTD.textContent = ;
+   var iLI = document.createElement('li');
+   iLI.textContent = listToRender[i];
+
+
 
    // Add the TR to the TBODY and each TD to the TR
-   tableBody.appendChild(tr);
-   tr.appendChild(xTD);
-   tr.appendChild(qTD);
-   tr.appendChild(iTD);
+   //.appendChild(iLI);
+   listBody.appendChild(checkbox);
+   listBody.appendChild(iLI);
+
+
+
+   
  }
 }
 
