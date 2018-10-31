@@ -24,7 +24,7 @@ activitiesMap.set('skiing', ['skiis', 'snowboard', 'helmet', 'boots', 'poles', '
 activitiesMap.set('ice fishing', ['ice auger', 'tape measure', 'ice pick',]);
 activitiesMap.set('showshoeing', ['snowshoes', 'poles', 'weather proof boots', 'gaiters']);
 
-var vacationList = [];
+// var vacationList = [];
 
 var Trip = function(array) {
   this.array = array;
@@ -37,3 +37,4 @@ Trip.prototype.addItems = function(itemArray) {
     this.array.push(itemArray[i]);
   }
 }
+

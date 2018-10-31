@@ -84,8 +84,25 @@ function handleActivitySubmit(e) {
 
 function handleItemsSubmit(e) {
   e.preventDefault();
+  var vacationList = [];
+ 
   console.warn('Items Selected');
+   for (var i = 0; i < e.target.length; i++) {
+    console.log(e.target[i].value, e.target[i].checked);
+ 
+    if (e.target[i].checked) {
+ vacationList.push(e.target[i].value);
+         }
+  }
+ trip.addItems(vacationList);
+ 
+  for (i = 0; i < trip.array.length; i++) {
+    createCheckboxItem('items', trip.array[i], true);
+  }
+  window.location='packing-list.html';
 }
+
+
 
 climateForm.addEventListener('submit', handleClimateSubmit);
 activityForm.addEventListener('submit', handleActivitySubmit);

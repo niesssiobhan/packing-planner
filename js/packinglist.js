@@ -1,34 +1,44 @@
- // Create a TD for the delete link, should be rendered along with list elements//
- var removeTD = document.createElement('td');
- removeTD.textContent = 'x';
- removeTD.classList.add('remover');
- removeTD.id = i;
+'use strict';
 
 
 
-//
-function removeItemFromTrip(event) {
-    // add table ID 
-    if (event.target.??????.contains('remover')) {
-      // Remove that item from the cart, based on the ID we set when we created the button.
-     ???.removeItem(parseInt(event.target.id));
-      // Save the cart back to local storage.
-     ???.saveToLocalStorage();
-      // Redraw the cart.
-      renderCart();
-    }
-  }
+function loadTrip() {
+ Trip.prototype.loadFromLocalStorage = function() {
+   this.array = JSON.parse(localStorage.getItems(‘trip’));
+}}
 
-  //create variable and event listener
-  var table = document.getElementById('???');
-  table.addEventListener('click', removeItemFromCart);
-  var ???;
+// Make magic happen --- re-pull the Cart, clear out the screen and re-draw it
+function renderTrip() {
+ loadTrip();
+ showTrip();
+
+}
 
 
-//app.js stuff 
+// TODO: Fill in the <tr>'s under the <tbody> for each item in the cart
+function showTrip() {
+ // Find the table body
+ var tableBody = document.querySelector('#finalSelection');
 
-Trip.prototype.removeItem = function("") {
- //this finds the string and replaces it with nothing i
-    this.???????.splice("", 1);
-  };
-  
+ // Iterate over the items in the cart
+ for (var i in trip.items) {
+   // Create a TR
+   var tr = document.createElement('tr');
+
+
+   // Create a TD for the item name
+   var iTD = document.createElement('td');
+   iTD.textContent = ;
+
+   // Add the TR to the TBODY and each TD to the TR
+   tableBody.appendChild(tr);
+   tr.appendChild(xTD);
+   tr.appendChild(qTD);
+   tr.appendChild(iTD);
+ }
+}
+
+
+
+// This will initialize the page and draw the cart on screen
+renderTrip();
