@@ -5,42 +5,41 @@
     <title>Packing List</title>
     <link rel="stylesheet" type="text/css" media="screen" href="css/reset.css"/>
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One|Spicy+Rice" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Leckerli+One|Playfair+Display|Yellowtail" rel="stylesheet">
   </head>
     
   <body>
 
+    <nav>
+      <ul>
+        <li id="home"><a href="index.html">Home</a></li>
+        <li id="packingList"><a class="active" href="packing-list.html">Packing List</a></li>
+        <li id="aboutUs"><a href="about-us.html">About Us</a></li>
+      </ul>
+    </nav>
+    
     <header>
-      <nav>
-        <ul>
-          <li id="home"><a href="index.html">Home</a></li>
-          <li id="packingList"><a class="active" href="packing-list.html">Packing List</a></li>
-          <li id="aboutUs"><a href="about-us.html">About Us</a></li>
-        </ul>
-      </nav>
+      <h1>Let's Start Packing!</h1>
     </header>
   
     <main>
+      <h2>Final List Of Selected Items</h2>
 
-      <section>
-        <div>
-          <h1>Let's Start Packing!</h1>
-          <img id="packing">
-          <h2>Final List Of Selected Items</h2>
-          <div>
-            <ul id="finalSelection">
-            </ul>
-          </div>
-          <form id="additionForm">
-              <fieldset>
-                <input name="newItem" type="text"/>
-                <button type = "type">add to the list</button>
-                <ul id="list"></ul>
-              </fieldset>
-          </form>
-        </div>
-      </section>
-    
+      <div>
+        <ul id="finalSelection">
+        </ul>
+      </div>
+
+      <div>
+        <form id="additionForm">
+          <fieldset>
+            <input name="newItem" type="text"/>
+            <button type = "type">add to the list</button>
+            <ul id="list"></ul>
+          </fieldset>
+        </form>
+      </div>
     </main>
     
     <script src="js/packinglist.js"></script>
