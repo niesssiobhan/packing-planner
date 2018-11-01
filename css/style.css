@@ -176,7 +176,7 @@ ul label input[type=checkbox]:checked ~ del {
     background-color:gray;
     border: none;
     color: white;
-    padding: 15px 32px;
+    padding: 10px 20px;
     text-align: center;
     display: inline-block;
     font-size: 20px;
