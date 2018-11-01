@@ -24,14 +24,11 @@ activitiesMap.set('skiing', ['skiis', 'snowboard', 'helmet', 'boots', 'poles', '
 activitiesMap.set('ice fishing', ['ice auger', 'tape measure', 'ice pick',]);
 activitiesMap.set('snowshoeing', ['snowshoes', 'poles', 'weather proof boots', 'gaiters']);
 
-// var vacationList = [];
-
 var Trip = function(array) {
   this.array = array;
 }
 
 var trip = new Trip(masterItems);
-// console.log(trip);
 
 Trip.prototype.addItems = function(itemArray) {
   for (var i = 0; i < itemArray.length; i++) {
@@ -41,9 +38,16 @@ Trip.prototype.addItems = function(itemArray) {
 
 Trip.prototype.removeArray = function(array) {
   for (var i = 0; i < array.length; i++) {
-    console.log(array);
     this.array.splice(this.array.indexOf(array[i]), 1);
   }
+}
+
+Trip.prototype.saveToLocalStorage = function(){
+  localStorage.storedList = JSON.stringify(trip.array);
+}
+
+Trip.prototype.retrieveFromLocalStorage = function() {
+  return JSON.parse(localStorage.storedList);
 }
 
 var slideIndex = 0;

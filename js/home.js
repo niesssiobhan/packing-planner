@@ -30,11 +30,7 @@ function handleClimateSubmit(e) {
   e.preventDefault();
   var activityList = [];
 
-  console.warn('Climate Selected');
-  console.info(e);
-
   for (var i = 0; i < e.target.length; i++) {
-    console.log(e.target[i].value, e.target[i].checked);
 
     if (e.target[i].checked) {
       switch (e.target[i].value) {
@@ -61,21 +57,16 @@ function handleClimateSubmit(e) {
 
   climateForm.hidden = true;
   activityForm.hidden = false;
-  console.log(trip);
 }
 
 function handleActivitySubmit(e) {
   e.preventDefault();
 
-  console.warn('Activities Selected');
-  console.info(e);
-
   for (var i = 0; i < e.target.length; i++) {
-    console.log(e.target[i].value, e.target[i].checked);
 
     if (e.target[i].checked) {
       var activity = e.target[i].value;
-      console.log(activity, activitiesMap.get(activity));
+
       trip.addItems(activitiesMap.get(activity));
     }
   }
@@ -86,36 +77,26 @@ function handleActivitySubmit(e) {
 
   activityForm.hidden = true;
   itemsForm.hidden = false;
-  console.log(trip);
 }
 
 function handleItemsSubmit(e) {
   e.preventDefault();
   var removeList = [];
- 
-  console.warn('Items Selected');
+
   for (var i = 0; i < e.target.length; i++) {
-    console.log(e.target[i].value, e.target[i].checked);
- 
     if (e.target[i].checked !== true) {
       removeList.push(e.target[i].value);
     }
   }
   trip.removeArray(removeList);
- 
+
   for (i = 0; i < trip.array.length; i++) {
     createCheckboxItem('items', trip.array[i], true);
   }
-
-  localStorage.storedList = JSON.stringify(trip.array);
-  
+  trip.saveToLocalStorage();
   window.location='packing-list.html';
 }
 
 climateForm.addEventListener('submit', handleClimateSubmit);
 activityForm.addEventListener('submit', handleActivitySubmit);
 itemsForm.addEventListener('submit', handleItemsSubmit);
-
-
-
-

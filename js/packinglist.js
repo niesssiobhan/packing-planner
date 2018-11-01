@@ -1,11 +1,13 @@
 'use strict';
 
-var listToRender = JSON.parse(localStorage.storedList);
+var listToRender = trip.retrieveFromLocalStorage();
+var additionForm = document.getElementById('additionForm');
+var trip = new Trip(listToRender);
 
 function renderTrip() {
   var listBody = document.getElementById('finalSelection');
 
-  for (var i = 0; i < listToRender.length; i++) {
+  for (var i = 0; i < trip.array.length; i++) {
     var newListItem = document.createElement('label');
     newListItem.className = 'container';
 
@@ -13,7 +15,7 @@ function renderTrip() {
     newCheck.type = 'checkbox';
 
     var newDel = document.createElement('del');
-    newDel.textContent = listToRender[i];
+    newDel.textContent = trip.array[i];
 
     var newSpan = document.createElement('span');
     newSpan.className = 'checkmark';
@@ -28,21 +30,14 @@ function renderTrip() {
 function handleSubmit(e) {
   e.preventDefault();
 
-  var newitem = e.target.newItem.value;
-  console.log(newitem);
-  listToRender.push(newitem);
+  var newitem = [e.target.newItem.value];
+  trip.addItems(newitem);
   document.getElementById('finalSelection').innerHTML='';
+  trip.saveToLocalStorage();
   renderTrip();
   e.target.newItem.value = null;
-  // document.getElementById('add').onclick = function() {
-  //   var text = document.getElementById('additions').value;
-  //   var li = '<li>' + text + '</li>';
-  //   document.getElementById('list').appendChild(li);
-  // listToRender.push(li);
-  // renderTrip();
-  // 
 }
-var additionForm = document.getElementById('additionForm');
+
 additionForm.addEventListener('submit', handleSubmit);
 
 renderTrip();
