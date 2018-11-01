@@ -89,13 +89,10 @@ ul label input[type=checkbox]:checked ~ del {
 }
 
 .output {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     text-transform: capitalize;
-    columns: 2;
-    -webkit-columns: 2;
-    -moz-columns: 2;
-    margin-bottom: 10px;
-
-}
+    }
 
 /* ------------------------Fancy Check Boxes-------------------------------------- */
 /* The container */
@@ -165,12 +162,6 @@ ul label input[type=checkbox]:checked ~ del {
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
 }
-
-#finalSelection {
-        columns: 2;
-        -webkit-columns: 2;
-        -moz-columns: 2;
-    }
 
 .button {
     background-color:gray;
