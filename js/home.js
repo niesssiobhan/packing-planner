@@ -81,19 +81,19 @@ function handleActivitySubmit(e) {
 
 function handleItemsSubmit(e) {
   e.preventDefault();
-  var removeList = [];
 
-  for (var i = 0; i < e.target.length; i++) {
-    if (e.target[i].checked !== true) {
-      removeList.push(e.target[i].value);
+  for (var i = 1; i < (e.target.length - 1); i++) { // [0] and [-1] are undefined
+    if (e.target[i].checked !== true ) {
+      trip.removeItem(e.target[i].value);
     }
   }
-  trip.removeArray(removeList);
 
   for (i = 0; i < trip.array.length; i++) {
     createCheckboxItem('items', trip.array[i], true);
   }
+
   trip.saveToLocalStorage();
+  itemsForm.innerHTML = ''; // So you don't see the list flash double before leaving page
   window.location='packing-list.html';
 }
 

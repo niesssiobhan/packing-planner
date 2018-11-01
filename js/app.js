@@ -36,14 +36,12 @@ Trip.prototype.addItems = function(itemArray) {
   }
 }
 
-Trip.prototype.removeArray = function(array) {
-  for (var i = 0; i < array.length; i++) {
-    this.array.splice(this.array.indexOf(array[i]), 1);
-  }
+Trip.prototype.removeItem = function(item) {
+  this.array.splice(this.array.indexOf(item), 1);
 }
 
 Trip.prototype.saveToLocalStorage = function(){
-  localStorage.storedList = JSON.stringify(trip.array);
+  localStorage.storedList = JSON.stringify(this.array);
 }
 
 Trip.prototype.retrieveFromLocalStorage = function() {
