@@ -1,9 +1,39 @@
-html {
-  background: rgba(219, 206, 206, 0.719);
-  font-size: 25px;
+main #Andrew img{
+border-radius: 5px;
+height: 100px;;
+width: 100px;
+float: left;
 }
 
-body {
-  margin: 40px;
-  font-family: 'Fjalla One', sans-serif;
+main #Jared img {
+border-radius: 5px;
+height: 100px;
+width: 100px;
+float: left;
+}
+
+main #Siobhan img {
+border-radius: 5px;
+height: 100px;
+width: 100px;
+float: right;
+}
+
+main #Harris img {
+border-radius: 5px;
+height: 100px;
+width: 100px;
+float: right;
+}
+
+#linkedin {
+
+}
+
+#twitter {
+
+}
+
+#github {
+
 }
