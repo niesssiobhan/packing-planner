@@ -14,15 +14,15 @@ var temperateMaster = ['light rain proof jacket', 'hat', 'bug spray', 'rain boot
 
 var activitiesMap = new Map();
 
-activitiesMap.set('swimming', ['water goggles', 'floaties', 'nose plug']);
-activitiesMap.set('snorkeling', ['snorkel mask', 'flippers', 'underwater camera gear', 'snorkel', 'water shoes', 'rash guard', 'float vest', 'wet suit']);
-activitiesMap.set('fishing', ['fishing pole and reel', 'tackle box', 'first aid kit', 'tip up', 'life vest', 'extra line', 'needle nose pliers', 'waders']);
-activitiesMap.set('golfing', ['golf shoes', 'golf bag', 'collared shirt', 'golf balls', 'tees']);
-activitiesMap.set('hiking', ['tent', 'backpack', 'hiking boots', 'hiking poles', 'compass/ map', 'food', 'cooking pots/ pans', 'water filter', 'lighter', 'utensils', 'sleeping bag', 'pillow', 'first aid kit', 'multi-purpose tool', 'trash bag']);
-activitiesMap.set('sledding', ['gaiters', 'inner tube', 'boogie board']);
-activitiesMap.set('skiing', ['skiis', 'snowboard', 'helmet', 'boots', 'poles', 'goggles', 'heavy gloves', 'heavy jacket', 'heavy pants']);
-activitiesMap.set('ice fishing', ['ice auger', 'tape measure', 'ice pick',]);
-activitiesMap.set('snowshoeing', ['snowshoes', 'poles', 'weather proof boots', 'gaiters']);
+activitiesMap.set('Swimming', ['water goggles', 'floaties', 'nose plug']);
+activitiesMap.set('Snorkeling', ['snorkel mask', 'flippers', 'underwater camera gear', 'snorkel', 'water shoes', 'rash guard', 'float vest', 'wet suit']);
+activitiesMap.set('Fishing', ['fishing pole and reel', 'tackle box', 'first aid kit', 'tip up', 'life vest', 'extra line', 'needle nose pliers', 'waders']);
+activitiesMap.set('Golfing', ['golf shoes', 'golf bag', 'collared shirt', 'golf balls', 'tees']);
+activitiesMap.set('Hiking', ['tent', 'backpack', 'hiking boots', 'hiking poles', 'compass/ map', 'food', 'cooking pots/ pans', 'water filter', 'lighter', 'utensils', 'sleeping bag', 'pillow', 'first aid kit', 'multi-purpose tool', 'trash bag']);
+activitiesMap.set('Sledding', ['gaiters', 'inner tube', 'boogie board']);
+activitiesMap.set('Skiing', ['skiis', 'snowboard', 'helmet', 'boots', 'poles', 'goggles', 'heavy gloves', 'heavy jacket', 'heavy pants']);
+activitiesMap.set('Ice Fishing', ['ice auger', 'tape measure', 'ice pick',]);
+activitiesMap.set('Snowshoeing', ['snowshoes', 'poles', 'weather proof boots', 'gaiters']);
 
 var Trip = function(array) {
   this.array = array;

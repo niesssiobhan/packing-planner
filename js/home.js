@@ -4,6 +4,14 @@ var climateForm = document.getElementById('climateForm');
 var activityForm = document.getElementById('activityForm');
 var itemsForm = document.getElementById('itemsForm');
 
+var userSelections = '';
+
+function renderUserSelections(text) {
+  userSelections += text;
+  var currentSelections = document.getElementById('currentSelections');
+  currentSelections.innerHTML = userSelections;
+}
+
 function createCheckboxItem(elementId, item, checkedYN) {
   var formContents = document.getElementById(elementId);
 
@@ -33,22 +41,23 @@ function handleClimateSubmit(e) {
   for (var i = 0; i < e.target.length; i++) {
 
     if (e.target[i].checked) {
+      renderUserSelections(`Climate: ${e.target[i].value} > `);
+
       switch (e.target[i].value) {
-      case 'hot':
+      case 'Hot':
         activityList = hotActivities;
         trip.addItems(hotMaster);
         break;
-      case 'temperate':
+      case 'Temperate':
         activityList = temperateActivities;
         trip.addItems(temperateMaster);
         break;
-      case 'cold':
+      case 'Cold':
         activityList = coldActivities;
         trip.addItems(coldMaster);
         break;
       }
     }
-
   }
 
   for (i = 0; i < activityList.length; i++) {
@@ -61,18 +70,29 @@ function handleClimateSubmit(e) {
 
 function handleActivitySubmit(e) {
   e.preventDefault();
+  var activitySelections = [];
+  renderUserSelections('Activities: ')
 
   for (var i = 0; i < e.target.length; i++) {
-
     if (e.target[i].checked) {
       var activity = e.target[i].value;
 
       trip.addItems(activitiesMap.get(activity));
+      activitySelections.push(activity);
     }
   }
 
   for (i = 0; i < trip.array.length; i++) {
     createCheckboxItem('items', trip.array[i], true);
+  }
+
+  if (activitySelections.length > 1) {
+    for (i = 0; i < activitySelections.length - 1; i++){
+      renderUserSelections(`${activitySelections[i]}, `);
+    }
+    renderUserSelections(activitySelections[activitySelections.length - 1]);
+  } else {
+    renderUserSelections(activitySelections[0]);
   }
 
   activityForm.hidden = true;
@@ -93,7 +113,10 @@ function handleItemsSubmit(e) {
   }
 
   trip.saveToLocalStorage();
-  itemsForm.innerHTML = ''; // So you don't see the list flash double before leaving page
+
+  var selectionForms = document.getElementById('selectionForms');
+  selectionForms.innerHTML = ''; // So you don't see the list flash double before leaving page
+
   window.location='packing-list.html';
 }
 

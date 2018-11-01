@@ -14,29 +14,19 @@
       <header>
           <h1>Packing<img src="img/TravelBrain.png" id="logoimg" height="100px" width="100px">Planner</h1>
       </header>
-    
-
-
-
 
     <nav>
-     
-      
-      
-      
-      <ul>
-        
+     <ul>
         <li id="home"><a class="active" href="index.html">Home</a></li>
         <li id="packingList"><a href="packing-list.html">Packing List</a></li>
-        
         <li id="aboutUs"><a href="about-us.html">About Us</a></li>
       </ul>
     </nav>
 
-
-     
-          <h2>What Climate are you traveling to?</h2>
-      
+    <main>
+      <h2>Create a New Packing List</h2>
+    </main>
+    <h2 id="currentSelections"></h2>
 
   <!-- Slideshow container -->
   <div class="slideshow-container">
@@ -59,19 +49,19 @@
     </div>
 
     <div class="mySlides fade">
-        <img src="img/suitcase.png" style="width:100%">
-      </div>
+      <img src="img/suitcase.png" style="width:100%">
+    </div>
   </div>
 
-        
+  <section id="selectionForms">
 
       <div>
         <form class="form" id="climateForm">
           <fieldset>
             <legend>Pick a Climate</legend>
-            <label class="container"><input type="radio" name="climate" value="hot" />Hot<span class="checkmark"></span></label>
-            <label class="container"><input type="radio" name="climate" value="temperate" />Temperate<span class="checkmark"></span></label>
-            <label class="container"><input type="radio" name="climate" value="cold" />Cold<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="climate" value="Hot" />Hot<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="climate" value="Temperate" />Temperate<span class="checkmark"></span></label>
+            <label class="container"><input type="radio" name="climate" value="Cold" />Cold<span class="checkmark"></span></label>
             <input type="submit" value="Select Climate"  class="button" />
           </fieldset>
           </form>
@@ -96,6 +86,8 @@
           </fieldset>
           </form>
       </div>
+
+  </section>
 
     </main>
 
