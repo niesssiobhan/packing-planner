@@ -8,16 +8,10 @@ body {
     font-family: 'Fjalla One', sans-serif;
 }
 
-
-
-
-
 #logoimg{
     z-index: 2;
-   
     border-radius: 50%;
     display: inline-block;
-   
 }
 
 nav li:last-child{
@@ -96,6 +90,11 @@ ul label input[type=checkbox]:checked ~ del {
 
 .output {
     text-transform: capitalize;
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+    margin-bottom: 10px;
+
 }
 
 /* ------------------------Fancy Check Boxes-------------------------------------- */
@@ -167,13 +166,11 @@ ul label input[type=checkbox]:checked ~ del {
     transform: rotate(45deg);
 }
 
-#finalsolution{
-    height: 300px;
-    width:500px;
-
-
-
-}
+#finalSelection {
+        columns: 2;
+        -webkit-columns: 2;
+        -moz-columns: 2;
+    }
 
 .button {
     background-color:gray;
@@ -188,11 +185,7 @@ ul label input[type=checkbox]:checked ~ del {
     cursor: pointer;
     font-family: 'Fjalla One', sans-serif;
     border-radius: 50%; 
-    
 }
 .button:hover{
     background-color: orange;
-
-
-
 }
