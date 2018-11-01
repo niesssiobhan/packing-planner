@@ -42,7 +42,7 @@ nav li a:hover {
 }
 
 nav .active {
-    background-color:blue;
+    background-color:orange;
 }
 
 header h1{
@@ -149,4 +149,34 @@ ul label input[type=checkbox]:checked ~ del {
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     transform: rotate(45deg);
+}
+
+#finalsolution{
+    height: 300px;
+    width:500px;
+
+
+
+}
+
+.button {
+    background-color:gray;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 14px;
+    margin: 4px 2px;
+    cursor: pointer;
+    font-family: 'Fjalla One', sans-serif;
+    border-radius: 50%; 
+    
+}
+.button:hover{
+    background-color: orange;
+
+
+
 }
