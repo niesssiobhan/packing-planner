@@ -1,39 +1,50 @@
-main #Andrew img{
-border-radius: 5px;
-height: 100px;;
-width: 100px;
-float: left;
+.photo {
+  border-radius: 10px;
+  height: 300px;;
+  width: 300px;
+  margin-right: 10px;
+  position: relative;
 }
 
-main #Jared img {
-border-radius: 5px;
-height: 100px;
-width: 100px;
-float: left;
+.icon img {
+height: 20px;
+width: 20px;
+} 
+
+.AandJ {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150%; 
+  padding: 100px;
 }
 
-main #Siobhan img {
-border-radius: 5px;
-height: 100px;
-width: 100px;
-float: right;
+.SandH {
+  display: inline-block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 150%; 
+  padding: 100px;
+  
 }
 
-main #Harris img {
-border-radius: 5px;
-height: 100px;
-width: 100px;
-float: right;
+.team {
+display: inline-block;
+width: 30%;
+height: 80%;
+margin-top: 100px;
+padding: 0 8px;
+margin-bottom: 16px;
 }
 
-#linkedin {
-
+.row {
+  width: 100%;
 }
 
-#twitter {
-
-}
-
-#github {
-
+p {
+  font-size: 20px;
+  text-align: inherit;
+  margin-top: 10px;
+  width: 77%;
+  height: 800%;
 }
