@@ -8,6 +8,18 @@ body {
     font-family: 'Fjalla One', sans-serif;
 }
 
+
+
+
+
+#logoimg{
+    z-index: 2;
+   
+    border-radius: 50%;
+    display: inline-block;
+   
+}
+
 nav li:last-child{
     float:right;
     border-right:none;
@@ -46,8 +58,12 @@ nav .active {
 }
 
 header h1{
-    text-align: center;
+    text-align: left;
     font-size: 70px;
+    margin-bottom: 20px;
+}
+h1{
+    z-index: 1;
 }
 
 main h2 {
