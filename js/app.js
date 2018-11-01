@@ -8,7 +8,7 @@ var hotActivities = ['swimming', 'snorkeling', 'fishing', 'golfing', 'hiking'];
 var temperateActivities = ['golfing', 'hiking', 'fishing'];
 
 var coldMaster = ['heavy jacket', 'gloves', 'warm boots', 'knitted cap', 'warm/thick socks', 'thermal underwear', 'scarf'];
-var hotMaster = ['bathing suit', 'beach towel', 'sandles/ flip-flops', 'hat', 'bug spray', 'aloe vera/ after sun lotion', 'light rain proof jacket'];
+var hotMaster = ['bathing suit', 'beach towel', 'sandals/ flip-flops', 'hat', 'bug spray', 'aloe vera/ after sun lotion', 'light rain proof jacket'];
 var temperateMaster = ['light rain proof jacket', 'hat', 'bug spray', 'rain boots', 'rubber sole shoes/ water-resistant', 'umberella'];
 
 
