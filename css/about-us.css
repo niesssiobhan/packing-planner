@@ -50,3 +50,7 @@ p {
   margin-top: 10px;
   font-family: 'Times New Roman', Times, serif;
 }
+
+.name-logo-container > div,h3{
+  display: inline-block;
+}
