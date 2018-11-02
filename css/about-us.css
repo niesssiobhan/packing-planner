@@ -11,6 +11,42 @@ height: 20px;
 width: 20px;
 } 
 
+/* .logos {
+  float: right;
+  width: 100px;
+  position: absolute;
+  left: 10px;
+} */
+main {
+  margin: 40px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.a {
+  width: 100%;
+  /* position: relative; */
+}
+
+.j {
+  width: 100%;
+  /* position: relative; */
+}
+
+.s {
+  width: 80%;
+  /* position: relative; */
+}
+
+.h {
+  width: 80%;
+  /* position: relative; */
+}
+
+p {
+  /* max-width: 400px; */
+}
+/* 
 .AandJ {
   display: inline-block;
   margin-left: auto;
@@ -26,8 +62,8 @@ width: 20px;
   width: 150%; 
   padding: 100px;
   
-}
-
+} */
+/* 
 .team {
 display: inline-block;
 width: 30%;
@@ -39,7 +75,7 @@ margin-bottom: 16px;
 
 .row {
   width: 100%;
-}
+} */
 
 p {
   font-size: 20px;
