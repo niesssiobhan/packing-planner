@@ -3,84 +3,50 @@
   height: 300px;;
   width: 300px;
   margin-right: 10px;
-  position: relative;
+  float: left;
 }
 
 .icon img {
 height: 20px;
 width: 20px;
+display: inline-block;
 } 
-
-/* .logos {
-  float: right;
-  width: 100px;
-  position: absolute;
-  left: 10px;
-} */
-main {
-  margin: 40px;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
 
 .a {
   width: 100%;
-  /* position: relative; */
+  margin-bottom: 60px;
 }
 
 .j {
   width: 100%;
-  /* position: relative; */
+  margin-bottom: 50px; 
 }
 
 .s {
-  width: 80%;
-  /* position: relative; */
+  width: 100%;
+  margin-bottom: 80px;
 }
 
 .h {
-  width: 80%;
-  /* position: relative; */
+  width: 100%;
+  margin-bottom: 50px;
 }
 
-p {
-  /* max-width: 400px; */
-}
-/* 
 .AandJ {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150%; 
-  padding: 100px;
+  width: 45%;
+  float: left;
+  margin-right: 60px;
 }
 
 .SandH {
   display: inline-block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 150%; 
-  padding: 100px;
-  
-} */
-/* 
-.team {
-display: inline-block;
-width: 30%;
-height: 80%;
-margin-top: 100px;
-padding: 0 8px;
-margin-bottom: 16px;
+  width: 45%;
+  float: left;
 }
-
-.row {
-  width: 100%;
-} */
 
 p {
   font-size: 20px;
-  text-align: inherit;
   margin-top: 10px;
-  width: 77%;
-  height: 800%;
+  font-family: 'Times New Roman', Times, serif;
 }
