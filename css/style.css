@@ -1,182 +1,182 @@
 html {
-    background: rgba(219, 206, 206, 0.719);
-    font-size: 25px;
+  background: rgba(219, 206, 206, 0.719);
+  font-size: 25px;
 }
 
 body {
-    margin: 40px;
-    font-family: 'Fjalla One', sans-serif;
+  margin: 40px;
+  font-family: "Fjalla One", sans-serif;
 }
 
-#logoimg{
-    z-index: 2;
-    border-radius: 50%;
-    display: inline-block;
+#logoimg {
+  z-index: 2;
+  border-radius: 50%;
+  display: inline-block;
 }
 
-nav li:last-child{
-    float:right;
-    border-right:none;
+nav li:last-child {
+  float: right;
+  border-right: none;
 }
 
 nav {
-    margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 nav ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color:grey;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: grey;
 }
 
 nav li {
-    float: left;
+  float: left;
   border-right: 1px solid #bbb;
 }
 
 nav li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
 }
 
 nav li a:hover {
-    background-color:orange;
+  background-color: orange;
 }
 
 nav .active {
-    background-color:orange;
+  background-color: orange;
 }
 
-header h1{
-    text-align: left;
-    font-size: 70px;
-    margin-bottom: 20px;
+header h1 {
+  text-align: left;
+  font-size: 70px;
+  margin-bottom: 20px;
 }
-h1{
-    z-index: 1;
+h1 {
+  z-index: 1;
 }
 
-main h2 {
-    font-size: 40px;
-    margin: 30px;
+h2 {
+  font-size: 40px;
+  margin: 30px;
 }
 
 legend {
-    margin: 20px;
-    background-color: #000;
-    color: #fff;
-    padding: 3px 6px;
+  margin: 20px;
+  background-color: #000;
+  color: #fff;
+  padding: 3px 6px;
 }
 
 footer {
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  color: white;
+  text-align: center;
 }
 ul label del {
-    text-decoration: none;
+  text-decoration: none;
 }
 
-ul label input[type=checkbox]:checked ~ del {
-    text-decoration: line-through;
+ul label input[type="checkbox"]:checked ~ del {
+  text-decoration: line-through;
 }
 
 .output {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    text-transform: capitalize;
-    }
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  text-transform: capitalize;
+}
 
 /* ------------------------Fancy Check Boxes-------------------------------------- */
 /* The container */
 .container {
-    display: block;
-    position: relative;
-    padding-left: 35px;
-    margin-bottom: 12px;
-    cursor: pointer;
-    font-size: 22px;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 /* Hide the browser's default checkbox */
 .container input {
-    position: absolute;
-    opacity: 0;
-    cursor: pointer;
-    height: 0;
-    width: 0;
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
 }
 
 /* Create a custom checkbox */
 .checkmark {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 25px;
-    width: 25px;
-    background-color: #eee;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
 }
 
 /* On mouse-over, add a grey background color */
 .container:hover input ~ .checkmark {
-    background-color: #ccc;
+  background-color: #ccc;
 }
 
 /* When the checkbox is checked, add a blue background */
 .container input:checked ~ .checkmark {
-    background-color: #2196F3;
+  background-color: #2196f3;
 }
 
 /* Create the checkmark/indicator (hidden when not checked) */
 .checkmark:after {
-    content: "";
-    position: absolute;
-    display: none;
+  content: "";
+  position: absolute;
+  display: none;
 }
 
 /* Show the checkmark when checked */
 .container input:checked ~ .checkmark:after {
-    display: block;
+  display: block;
 }
 
 /* Style the checkmark/indicator */
 .container .checkmark:after {
-    left: 9px;
-    top: 5px;
-    width: 5px;
-    height: 10px;
-    border: solid white;
-    border-width: 0 3px 3px 0;
-    -webkit-transform: rotate(45deg);
-    -ms-transform: rotate(45deg);
-    transform: rotate(45deg);
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 
 .button {
-    background-color:gray;
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 14px;
-    margin: 4px 2px;
-    cursor: pointer;
-    font-family: 'Fjalla One', sans-serif;
-    border-radius: 50%; 
+  background-color: gray;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  margin: 4px 2px;
+  cursor: pointer;
+  font-family: "Fjalla One", sans-serif;
+  border-radius: 50%;
 }
-.button:hover{
-    background-color: orange;
+.button:hover {
+  background-color: orange;
 }
